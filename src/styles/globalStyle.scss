@@ -121,7 +121,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  // font-family: 'Pretendard';
 }
 a,
 button {
@@ -154,10 +153,10 @@ table {
   box-sizing: border-box;
 }
 html {
-  font-size: 37.5%; // 1rem = 8.5px;
+  font-size: 37.5%;
 
   @include tablet {
-    font-size: 50%; // 1rem = 10px;
+    font-size: 50%;
   }
   @include desktop {
     font-size: 62.5%;

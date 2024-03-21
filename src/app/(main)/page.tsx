@@ -8,7 +8,8 @@ const cx = classNames.bind(style);
 export default function Home() {
   return (
     <main className={cx("page")}>
-      main
+      <span>밣</span>
+      <span>가</span>
       <Image src={logo} alt="" />
     </main>
   );
