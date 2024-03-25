@@ -1,7 +1,39 @@
 @import "../../styles//color.scss";
 @import "../../styles//media.scss";
 
+@mixin layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .page {
-  font-size: 5rem;
-  color: $purple;
+  height: 100dvh;
+  @include layout;
+}
+
+.imgWrapper {
+  position: relative;
+  width: 32rem;
+  height: 26rem;
+  object-fit: "contain";
+}
+
+.title {
+  padding-top: 5rem;
+  font-size: 6rem;
+  color: $blue;
+}
+
+.subWrapper {
+  @include layout;
+  line-height: 1.5;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+.sub {
+  font-size: 3rem;
+  color: black;
 }
