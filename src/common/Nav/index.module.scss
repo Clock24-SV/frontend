@@ -1,0 +1,56 @@
+.nav {
+  min-height: 80px;
+}
+
+.inner-nav {
+  display: flex;
+  justify-content: center;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.right-inner-nav {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding-top: 1.5rem;
+}
+
+.find-button {
+  width: 11rem;
+  height: 5rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #9747ff;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-right: 1.5rem;
+}
+
+.config {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+
+  transition: transform 1.5s;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
+
+.profile {
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: gray;
+  border-radius: 50%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
