@@ -19,13 +19,10 @@ const Nav = () => {
   return (
     <nav className={cx("nav")}>
       <div className={cx("inner-nav")}>
-        <RImage
-          width="25rem"
-          height="12rem"
-          alt="logo"
-          src={logo}
-          left="20px"
-        />
+        <div className={cx("logo")}>
+          <RImage width="25rem" height="12rem" alt="logo" src={logo} />
+        </div>
+
         <div className={cx("right-inner-nav")}>
           <button className={cx("find-button")}>친구 찾기</button>
           <div className={cx("config")}>

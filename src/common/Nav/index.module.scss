@@ -6,9 +6,16 @@
 }
 
 .inner-nav {
+  position: relative;
   display: flex;
   max-width: 1800px;
   margin: 0 auto;
+}
+
+.logo {
+  position: absolute;
+  top: 5px;
+  left: 15px;
 }
 
 .right-inner-nav {
@@ -45,7 +52,7 @@
   height: 5rem;
   border-radius: 1rem;
   border: none;
-  background-color: $purple;
+  background-color: $light-purple;
   cursor: pointer;
   font-size: 2rem;
   color: #ffffff;
@@ -53,9 +60,10 @@
 }
 
 .config {
+  margin: auto 0;
   position: relative;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   cursor: pointer;
 
   transition: transform 1.5s;
@@ -66,8 +74,8 @@
 }
 
 .profile {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 5rem;
+  height: 5rem;
   background-color: gray;
   border-radius: 50%;
   margin-left: 1.5rem;
