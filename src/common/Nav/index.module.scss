@@ -1,0 +1,113 @@
+@import "../../styles/media.scss";
+@import "../../styles/color.scss";
+
+.nav {
+  min-height: 80px;
+}
+
+.inner-nav {
+  position: relative;
+  display: flex;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.logo {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+}
+
+.right-inner-nav {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding-top: 1.5rem;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.mobile-toggle-icon {
+  display: none;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+  @include mobile {
+    display: block;
+  }
+}
+
+.find-button {
+  width: 11rem;
+  height: 5rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: $light-purple;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-right: 1.5rem;
+}
+
+.config {
+  margin: auto 0;
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+
+  transition: transform 1.5s;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
+
+.profile {
+  width: 5rem;
+  height: 5rem;
+  background-color: gray;
+  border-radius: 50%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.sidebar-back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+
+.sidebar {
+  position: fixed;
+  right: 0;
+  width: 25rem;
+  height: 100%;
+  background-color: white;
+  z-index: 1001;
+}
+
+.close-sidebar {
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+}
