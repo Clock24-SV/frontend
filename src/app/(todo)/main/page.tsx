@@ -11,7 +11,6 @@ const cx = classNames.bind(styles);
 const Main = () => {
   return (
     <main className={cx("main")}>
-      <Nav />
       <Todo>
         <Todo.Day />
         <Todo.Progressive />

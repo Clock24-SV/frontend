@@ -20,8 +20,8 @@ const Schedule = () => {
             className={cx("plus")}
             src={plus}
             alt="plus"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
           />
         </div>
         <TodoLists>
@@ -48,8 +48,8 @@ const Schedule = () => {
             className={cx("plus")}
             src={plus}
             alt="plus"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
           />
         </div>
         <TodoLists>
@@ -65,8 +65,8 @@ const Schedule = () => {
             className={cx("plus")}
             src={plus}
             alt="plus"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
           />
         </div>
         <TodoLists>
