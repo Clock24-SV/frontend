@@ -6,6 +6,7 @@ import classNames from "classnames/bind";
 import Day from "./Day";
 import Progressive from "./Progressive";
 import Schedule from "./Schedule";
+import { useTodos } from "@/hooks/useTodo";
 
 const cx = classNames.bind(style);
 
@@ -16,8 +17,10 @@ type Props = {
 const todoContext = createContext<any | null>(null);
 
 const Todo = ({ children }: Props) => {
+  const { weather, handleWeatherClick } = useTodos();
+
   return (
-    <todoContext.Provider value={{}}>
+    <todoContext.Provider value={{ weather, handleWeatherClick }}>
       <section className={cx("wrapper")}>{children}</section>
     </todoContext.Provider>
   );
