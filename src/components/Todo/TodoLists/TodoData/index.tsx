@@ -6,7 +6,7 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
 const TodoData = () => {
-  return <div>밥 먹기</div>;
+  return <div className={cx("todoData")}>밥 먹기</div>;
 };
 
 export default TodoData;

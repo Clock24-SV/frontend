@@ -5,7 +5,7 @@ import classNames from "classnames/bind";
 const cx = classNames.bind(styles);
 
 const ClearButton = () => {
-  return <div>완료</div>;
+  return <button className={cx("button")}>완료</button>;
 };
 
 export default ClearButton;
