@@ -8,7 +8,7 @@ const cx = classNames.bind(style);
 
 export default function KakaoLoginButton() {
   return (
-    <button className={cx("login-btn")} onClick={() => signIn("kakao", { callbackUrl: "/main" })}>
+    <button className={cx("login-btn")} onClick={() => signIn("kakao", { callbackUrl: "/todo" })}>
       카카오 로그인
     </button>
   );
