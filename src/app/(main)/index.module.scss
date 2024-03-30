@@ -13,7 +13,7 @@
   @include layout;
 }
 
-.imgWrapper {
+.img-wrapper {
   position: relative;
   width: 32rem;
   height: 26rem;
@@ -26,7 +26,7 @@
   color: $blue;
 }
 
-.subWrapper {
+.sub-wrapper {
   @include layout;
   line-height: 1.5;
   padding-top: 2rem;
