@@ -18,7 +18,7 @@ const TodoCalendar = () => {
 
   return (
     <div>
-      <div className={cx("calendar-wrapper")} onClick={(e) => console.log(e)}>
+      <div className={cx("calendar-wrapper")}>
         <DayPicker
           locale={ko}
           weekStartsOn={1} // 월요일부터 시작
