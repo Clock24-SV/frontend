@@ -2,6 +2,8 @@ import { ReactNode } from "react";
 
 type Prop = { children: ReactNode };
 
-export default function TodoLayout({ children }: Prop) {
+const TodoLayout = ({ children }: Prop) => {
   return <div>{children}</div>;
-}
+};
+
+export default TodoLayout;
