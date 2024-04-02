@@ -1,17 +1,15 @@
-import Image from "next/image";
 import style from "./index.module.scss";
 import logo from "../../assets/Images/logo.svg";
 import classnames from "classnames/bind";
 import KakaoLoginButton from "@/components/KakaoLoginButton";
+import RImage from "@/common/RImage";
 
 const cx = classnames.bind(style);
 
-export default function Home() {
+const Home = () => {
   return (
     <main className={cx("page")}>
-      <div className={cx("img-wrapper")}>
-        <Image src={logo} alt="logo" priority={true} fill={true} />
-      </div>
+      <RImage src={logo} alt="logo" width="32rem" height="26rem" />
 
       <h1 className={cx("title")}>Clock24</h1>
 
@@ -23,4 +21,6 @@ export default function Home() {
       <KakaoLoginButton />
     </main>
   );
-}
+};
+
+export default Home;
