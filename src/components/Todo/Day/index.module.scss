@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+
+  & > h2 {
+    font-size: 4rem;
+    margin-right: 1rem;
+  }
+
+  .weather {
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+}

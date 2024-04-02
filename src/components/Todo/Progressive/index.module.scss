@@ -1,0 +1,36 @@
+@import "../../../styles/color.scss";
+@import "../../../styles/media.scss";
+
+.wrapper {
+}
+
+.pro-bar {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background-color: $light-gray;
+  border-radius: 5px;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $blue;
+  width: 30%;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.todo-percent {
+  position: relative;
+  width: 100px;
+  height: 50px;
+
+  & > span {
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    font-size: 1.5rem;
+  }
+}

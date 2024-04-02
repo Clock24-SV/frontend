@@ -1,0 +1,42 @@
+.wrapper {
+}
+
+.situation {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  margin-bottom: 10px;
+
+  & > div:nth-of-type(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+  }
+}
+
+.plus {
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.before-text {
+  background-color: #ff9190;
+}
+
+.proceed-text {
+  background-color: #70a9ff;
+}
+
+.completed-text {
+  background-color: #70e08f;
+}
+
+.proceed {
+  margin: 2rem 0;
+}
