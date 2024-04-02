@@ -1,0 +1,35 @@
+@import "./color.scss";
+
+.rdp {
+  --rdp-cell-size: 6rem !important;
+  --rdp-caption-font-size: 2.8rem !important;
+  --rdp-accent-color: #208bff !important;
+  --rdp-background-color: #cde2ff !important;
+}
+
+.rdp-months {
+  width: 100%;
+  height: 100%;
+}
+
+.rdp-caption_label {
+  color: $purple !important;
+  padding-left: 1.5rem !important;
+}
+
+.rdp-dropdown_month {
+  order: 2;
+}
+
+.rdp-head_cell {
+  font-size: 2rem !important;
+}
+
+.rdp-day {
+  font-size: 1.8rem !important;
+}
+
+.rdp-head_row th:nth-child(6),
+.rdp-head_row th:nth-child(7) {
+  color: #ff4433;
+}

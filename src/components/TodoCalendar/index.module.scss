@@ -1,0 +1,9 @@
+@import "../../styles//color.scss";
+
+.calendar-wrapper {
+  margin: 10rem; // 임시로 넣어놓은 margin
+  width: fit-content;
+  border: 2px solid $light-purple;
+  border-radius: 2rem;
+  box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.25);
+}
