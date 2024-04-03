@@ -1,9 +1,9 @@
-import Nav from "@/common/Nav";
 import { ReactNode } from "react";
+import Nav from "@/common/Nav";
 
 type Prop = { children: ReactNode };
 
-export default function TodoLayout({ children }: Prop) {
+const TodoLayout = ({ children }: Prop) => {
   return (
     <div>
       <Nav />
@@ -11,3 +11,5 @@ export default function TodoLayout({ children }: Prop) {
     </div>
   );
 }
+  
+export default TodoLayout;

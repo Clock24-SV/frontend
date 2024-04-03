@@ -1,0 +1,49 @@
+@import "../../styles/color.scss";
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  @include center;
+  width: 40rem;
+  margin: 10rem; // 임시로 추가한 margin
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timer-container {
+  @include center;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.timer-wrapper {
+  @include center;
+  width: 30rem;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.time-title {
+  font-size: 3rem;
+  color: $gray;
+}
+
+.timer {
+  font-size: 4rem;
+}
+
+.text-wrapper {
+  @include center;
+  width: 40rem;
+  min-height: 8rem;
+  padding: 1rem 0;
+  border: 2px solid $light-gray;
+  border-radius: 1rem;
+  text-align: center;
+  color: $gray;
+  line-height: 1.5;
+}
