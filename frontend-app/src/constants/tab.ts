@@ -16,3 +16,7 @@ export const TABLISTS = [
     icon: require("../assets/images/Config.png"),
   },
 ] as const;
+
+const title = ["홈", "친구 찾기", "친구 목록", "환경설정"] as const;
+
+export type TitleType = (typeof title)[number];
