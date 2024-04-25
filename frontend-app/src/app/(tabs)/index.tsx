@@ -5,7 +5,7 @@ import { useState } from "react";
 import CustomTextInput from "@/src/common/CustomTextInput";
 import { css } from "@emotion/native";
 
-export default function TabOneScreen() {
+export default function HomeScreen() {
   const [count, setCount] = useState(0);
   return (
     <View>
