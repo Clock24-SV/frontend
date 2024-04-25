@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-export default function FriendList() {
+export default function FriendListScreen() {
   return (
     <View>
       <Text>FriendList</Text>
