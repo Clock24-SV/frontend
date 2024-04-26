@@ -1,17 +1,13 @@
 import { View, Text, PressableProps, Pressable } from "react-native";
-import React from "react";
-import CustomText from "./CustomText";
+import React, { CSSProperties } from "react";
 
 interface CustomButtonProps extends PressableProps {
-  label: string;
+  children?: React.ReactNode;
 }
 
-export default function CustomButton({ label, ...props }: CustomButtonProps) {
-  return (
-    <Pressable {...props}>
-      <View>
-        <CustomText>{label}</CustomText>
-      </View>
-    </Pressable>
-  );
+export default function CustomButton({
+  children,
+  ...props
+}: CustomButtonProps) {
+  return <Pressable {...props}>{children}</Pressable>;
 }

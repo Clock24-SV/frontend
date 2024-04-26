@@ -48,6 +48,7 @@ const Line = styled.View`
   border-radius: 5px;
   background-color: ${colors.GRAY};
   margin: 0 auto;
+  margin-bottom: 20px;
 `;
 
 const SelectLine = styled.View<{ menu: string }>`
