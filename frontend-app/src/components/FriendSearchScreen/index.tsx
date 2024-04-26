@@ -4,8 +4,25 @@ import { colors } from "@/src/constants/Colors";
 import CustomTextInput from "@/src/common/CustomTextInput";
 import CustomButton from "@/src/common/CustomButton";
 import CustomText from "@/src/common/CustomText";
+import { Button, Image } from "react-native";
 
-export default function FriendSearch() {
+interface FriendSearchProps {
+  search: string;
+  changeSearch: (text: string) => void;
+  saveData: () => void;
+  getData: () => void;
+  searchedData: string[];
+  removeData: (index: number) => void;
+}
+
+export default function FriendSearch({
+  search,
+  changeSearch,
+  saveData,
+  getData,
+  searchedData,
+  removeData,
+}: FriendSearchProps) {
   return (
     <>
       <TextInputBox>
@@ -13,25 +30,25 @@ export default function FriendSearch() {
         <CustomTextInput
           style={FriendSearchStyle}
           placeholder="친구를 찾아보세요!"
+          value={search}
+          onChangeText={(text) => changeSearch(text)}
           maxLength={20}
         />
+        <Button title="Save to Local Storage" onPress={saveData} />
+        <Button title="Retrieve from Local Storage" onPress={getData} />
       </TextInputBox>
       <SearchedInfo>
-        <CustomButton style={SearchedButton}>
-          <CustomText>은주</CustomText>
-        </CustomButton>
-        <CustomButton style={SearchedButton}>
-          <CustomText>은주</CustomText>
-        </CustomButton>
-        <CustomButton style={SearchedButton}>
-          <CustomText>은주</CustomText>
-        </CustomButton>
-        <CustomButton style={SearchedButton}>
-          <CustomText>은주</CustomText>
-        </CustomButton>
-        <CustomButton style={SearchedButton}>
-          <CustomText>은주</CustomText>
-        </CustomButton>
+        {searchedData.map((data, index) => {
+          return (
+            <CustomButton
+              onPress={() => removeData(index)}
+              style={SearchedButton}
+            >
+              <CustomText style={SearchedText}>{data}</CustomText>
+              <Image source={require("../../assets/images/close.png")} />
+            </CustomButton>
+          );
+        })}
       </SearchedInfo>
     </>
   );
@@ -69,5 +86,19 @@ const SearchedInfo = styled.View`
 `;
 
 const SearchedButton = css`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
   padding: 10px;
+  min-width: 50px;
+  border: 1px solid ${colors.PURPLE};
+  border-radius: 10px;
+`;
+
+const SearchedText = css`
+  padding: 0 10px;
+  font-size: 16px;
 `;

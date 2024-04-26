@@ -3,14 +3,21 @@ import styled, { css } from "@emotion/native";
 import FriendList from "@/src/components/FriendListScreen/FrinedList";
 import FriendSearch from "@/src/components/FriendSearchScreen";
 import CustomText from "@/src/common/CustomText";
-import useInput from "@/src/hooks/useInput";
+import useSearch from "@/src/hooks/FriendSearchScreen/useSearch";
 
 export default function FriendSearchScreen() {
-  const [search, onChangeSearch] = useInput();
-
+  const { search, changeSearch, saveData, getData, searchedData, removeData } =
+    useSearch();
   return (
     <Container>
-      <FriendSearch />
+      <FriendSearch
+        search={search}
+        changeSearch={changeSearch}
+        saveData={saveData}
+        getData={getData}
+        searchedData={searchedData}
+        removeData={removeData}
+      />
       <CustomText style={RecommendFriend}>추천 친구</CustomText>
       <FriendList>
         <FriendList.Profile />
