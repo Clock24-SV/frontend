@@ -4,10 +4,13 @@ import FriendList from "@/src/components/FriendListScreen/FrinedList";
 import FriendSearch from "@/src/components/FriendSearchScreen";
 import CustomText from "@/src/common/CustomText";
 import useSearch from "@/src/hooks/FriendSearchScreen/useSearch";
+import { isEmptyArr } from "@/src/utils/friendSearch";
 
 export default function FriendSearchScreen() {
   const { search, changeSearch, saveData, getData, searchedData, removeData } =
     useSearch();
+
+  console.log(isEmptyArr(searchedData));
   return (
     <Container>
       <FriendSearch

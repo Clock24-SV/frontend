@@ -4,7 +4,8 @@ import { colors } from "@/src/constants/Colors";
 import CustomTextInput from "@/src/common/CustomTextInput";
 import CustomButton from "@/src/common/CustomButton";
 import CustomText from "@/src/common/CustomText";
-import { Button, Image } from "react-native";
+import { Button, Image, ScrollView } from "react-native";
+import { isEmptyArr } from "@/src/utils/friendSearch";
 
 interface FriendSearchProps {
   search: string;
@@ -37,19 +38,21 @@ export default function FriendSearch({
         <Button title="Save to Local Storage" onPress={saveData} />
         <Button title="Retrieve from Local Storage" onPress={getData} />
       </TextInputBox>
-      <SearchedInfo>
-        {searchedData.map((data, index) => {
-          return (
-            <CustomButton
-              onPress={() => removeData(index)}
-              style={SearchedButton}
-            >
-              <CustomText style={SearchedText}>{data}</CustomText>
-              <Image source={require("../../assets/images/close.png")} />
-            </CustomButton>
-          );
-        })}
-      </SearchedInfo>
+      {!isEmptyArr<string>(searchedData) && (
+        <SearchedScrollBox horizontal>
+          {searchedData.map((data, index) => {
+            return (
+              <CustomButton
+                onPress={() => removeData(index)}
+                style={SearchedButton}
+              >
+                <CustomText style={SearchedText}>{data}</CustomText>
+                <Image source={require("../../assets/images/close.png")} />
+              </CustomButton>
+            );
+          })}
+        </SearchedScrollBox>
+      )}
     </>
   );
 }
@@ -69,6 +72,7 @@ const TextInputBox = styled.View`
   margin: 0 auto;
   border-bottom-color: ${colors.BLACK};
   border-bottom-width: 1.5px;
+  margin-bottom: 10px;
 `;
 
 const FriendSearchStyle = css`
@@ -76,13 +80,12 @@ const FriendSearchStyle = css`
   font-size: 15px;
 `;
 
-const SearchedInfo = styled.View`
+const SearchedScrollBox = styled.ScrollView`
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   width: 90%;
+  max-height: 50px;
   margin: 0 auto;
-  padding: 10px;
 `;
 
 const SearchedButton = css`
@@ -91,9 +94,9 @@ const SearchedButton = css`
   justify-content: center;
   align-items: center;
   margin-right: 10px;
-  margin-bottom: 10px;
   padding: 10px;
   min-width: 50px;
+  height: 40px;
   border: 1px solid ${colors.PURPLE};
   border-radius: 10px;
 `;
