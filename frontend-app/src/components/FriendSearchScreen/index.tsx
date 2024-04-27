@@ -34,6 +34,7 @@ export default function FriendSearch({
           value={search}
           onChangeText={(text) => changeSearch(text)}
           maxLength={20}
+          keyboardType="default"
         />
         <Button title="Save to Local Storage" onPress={saveData} />
         <Button title="Retrieve from Local Storage" onPress={getData} />

@@ -12,7 +12,13 @@ export default function CustomTextInput({ ...props }: CustomTextInputProps) {
   return (
     <Pressable onPress={handlePressInput}>
       <View>
-        <TextInput ref={innerRef} {...props} />
+        <TextInput
+          autoCapitalize="none"
+          spellCheck={false}
+          autoCorrect={false}
+          ref={innerRef}
+          {...props}
+        />
       </View>
     </Pressable>
   );
