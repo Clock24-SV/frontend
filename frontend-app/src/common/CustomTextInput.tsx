@@ -1,5 +1,5 @@
 import { View, TextInput, Pressable, TextInputProps } from "react-native";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 interface CustomTextInputProps extends TextInputProps {}
 

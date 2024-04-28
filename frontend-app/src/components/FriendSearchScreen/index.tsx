@@ -38,7 +38,6 @@ export default function FriendSearch({
           onSubmitEditing={async () => {
             await saveData();
             await getData();
-            changeSearch("");
           }}
         />
       </TextInputBox>
@@ -48,11 +47,13 @@ export default function FriendSearch({
             return (
               <CustomButton
                 key={index}
-                onPress={() => removeData(index)}
+                onPress={() => changeSearch(data)}
                 style={SearchedButton}
               >
                 <CustomText style={SearchedText}>{data}</CustomText>
-                <Image source={require("../../assets/images/close.png")} />
+                <CustomButton onPress={() => removeData(index)}>
+                  <Image source={require("../../assets/images/close.png")} />
+                </CustomButton>
               </CustomButton>
             );
           })}
@@ -99,9 +100,9 @@ const SearchedButton = css`
   justify-content: center;
   align-items: center;
   margin-right: 10px;
-  padding: 10px;
+  padding: 0px 10px;
   min-width: 50px;
-  height: 40px;
+  height: 30px;
   border: 1px solid ${colors.PURPLE};
   border-radius: 10px;
 `;
