@@ -1,11 +1,12 @@
 import { View, Text } from "react-native";
 import React from "react";
 import styled from "@emotion/native";
+import CustomText from "@/src/common/CustomText";
 
 export const Title = () => {
   return (
     <Wrapper>
-      <Text>친구</Text>
+      <CustomText>친구</CustomText>
     </Wrapper>
   );
 };
