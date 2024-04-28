@@ -17,7 +17,9 @@ function _layout() {
       </View>
 
       <SubContainer>
-        <CustomButton style={KakaoLoginButton} label="카카오 로그인" />
+        <CustomButton style={KakaoLoginButton}>
+          <CustomText>카카오 로그인</CustomText>
+        </CustomButton>
       </SubContainer>
     </Container>
   );
