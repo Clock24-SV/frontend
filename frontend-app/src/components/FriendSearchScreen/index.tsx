@@ -38,6 +38,7 @@ export default function FriendSearch({
           onSubmitEditing={async () => {
             await saveData();
             await getData();
+            changeSearch("");
           }}
         />
       </TextInputBox>
