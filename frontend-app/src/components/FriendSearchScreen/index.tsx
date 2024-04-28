@@ -35,15 +35,18 @@ export default function FriendSearch({
           onChangeText={(text) => changeSearch(text)}
           maxLength={20}
           keyboardType="default"
+          onSubmitEditing={async () => {
+            await saveData();
+            await getData();
+          }}
         />
-        <Button title="Save to Local Storage" onPress={saveData} />
-        <Button title="Retrieve from Local Storage" onPress={getData} />
       </TextInputBox>
       {!isEmptyArr<string>(searchedData) && (
         <SearchedScrollBox horizontal>
           {searchedData.map((data, index) => {
             return (
               <CustomButton
+                key={index}
                 onPress={() => removeData(index)}
                 style={SearchedButton}
               >

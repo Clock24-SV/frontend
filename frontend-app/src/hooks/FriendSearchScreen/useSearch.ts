@@ -53,7 +53,7 @@ export default function useSearch() {
 
   useEffect(() => {
     getData();
-  }, [saveData]);
+  }, []);
 
   return { search, changeSearch, saveData, getData, searchedData, removeData };
 }
