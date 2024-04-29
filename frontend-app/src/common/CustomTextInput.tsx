@@ -1,5 +1,5 @@
 import { View, TextInput, Pressable, TextInputProps } from "react-native";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 interface CustomTextInputProps extends TextInputProps {}
 
@@ -12,7 +12,13 @@ export default function CustomTextInput({ ...props }: CustomTextInputProps) {
   return (
     <Pressable onPress={handlePressInput}>
       <View>
-        <TextInput ref={innerRef} {...props} />
+        <TextInput
+          autoCapitalize="none"
+          spellCheck={false}
+          autoCorrect={false}
+          ref={innerRef}
+          {...props}
+        />
       </View>
     </Pressable>
   );
