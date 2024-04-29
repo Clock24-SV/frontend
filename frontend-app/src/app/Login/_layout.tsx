@@ -18,7 +18,7 @@ export default function Login() {
 
       <SubContainer>
         <CustomButton style={KakaoLoginButton}>
-          <CustomText>카카오로 시작하기</CustomText>
+          <CustomText>카카오 로그인</CustomText>
         </CustomButton>
       </SubContainer>
     </Container>

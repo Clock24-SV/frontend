@@ -25,7 +25,7 @@ export const colors = {
   LIGHT_BLUE: "#CDE2FF",
   MINT: "#83E0EE",
   LIGHT_MINT: "#E4F8FD",
-  GARY: "#B3B3B3",
+  GRAY: "#B3B3B3",
   LIGHT_GRAY: "#D9D9D9",
   BLACK: "#000000",
 };
