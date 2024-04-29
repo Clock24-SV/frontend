@@ -3,6 +3,7 @@ import React from "react";
 import { useTodoContext } from "../index";
 import TodoItem from "./TodoItem";
 import { TodoType } from "@/src/types/todo";
+import { Dimensions } from "react-native";
 
 export default function TodoList() {
   const { todoData } = useTodoContext();
@@ -24,7 +25,8 @@ const Container = styled.View`
   justify-content: center;
 
   width: 100%;
-  min-height: 300px;
+  height: 100%;
+  min-height: 150px;
 `;
 
 const ListContainer = styled.FlatList`

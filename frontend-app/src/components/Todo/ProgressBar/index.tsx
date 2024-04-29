@@ -20,16 +20,14 @@ export default function ProgressBar() {
 }
 
 const Container = styled.View`
-  flex: 1;
-
   display: flex;
   align-items: center;
   justify-content: flex-start;
 
-  padding-top: 20px;
-
   width: 100%;
-  min-height: 80px;
+
+  padding-top: 20px;
+  padding-bottom: 40px;
 `;
 
 const BarContainer = styled.View`
