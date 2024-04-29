@@ -1,11 +1,11 @@
 import React from "react";
 import CustomText from "@/src/common/CustomText";
+import { colors } from "@/src/constants/Colors";
 import styled, { css } from "@emotion/native";
 import { Image, View } from "react-native";
 import CustomButton from "@/src/common/CustomButton";
-import { colors } from "@/src/constants/Colors";
 
-function _layout() {
+export default function Login() {
   return (
     <Container>
       <View>
@@ -17,7 +17,9 @@ function _layout() {
       </View>
 
       <SubContainer>
-        <CustomButton style={KakaoLoginButton} label="카카오 로그인" />
+        <CustomButton style={KakaoLoginButton}>
+          <CustomText>카카오로 시작하기</CustomText>
+        </CustomButton>
       </SubContainer>
     </Container>
   );
@@ -56,5 +58,3 @@ const KakaoLoginButton = css`
   padding: 10px 40px;
   font-size: 20px;
 `;
-
-export default _layout;

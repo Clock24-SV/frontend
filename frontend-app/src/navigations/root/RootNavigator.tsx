@@ -3,7 +3,7 @@ import AuthStackNavigator from "../stack/AuthStackNavigator";
 import StackNavigator from "../stack/StackNavigator";
 
 function RootNavigator() {
-  const isLoggedIn = false;
+  const isLoggedIn = true;
   return <>{isLoggedIn ? <StackNavigator /> : <AuthStackNavigator />}</>;
 }
 

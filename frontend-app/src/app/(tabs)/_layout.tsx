@@ -1,11 +1,12 @@
 import React from "react";
 import { Tabs } from "expo-router";
-import { colors } from "@/src/constants/Colors";
 import { useColorScheme } from "@/src/components/useColorScheme";
 import { useClientOnlyValue } from "@/src/components/useClientOnlyValue";
+import { colors } from "@/src/constants/Colors";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
+
   return (
     <Tabs
       screenOptions={{
@@ -16,8 +17,8 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: "Tab One",
-          // tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: "홈",
+          //   tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
         }}
       />
       <Tabs.Screen
