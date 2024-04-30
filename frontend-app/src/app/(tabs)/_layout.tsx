@@ -1,8 +1,8 @@
 import React from "react";
 import { Tabs } from "expo-router";
-import { colors } from "@/src/constants/Colors";
 import { useColorScheme } from "@/src/components/useColorScheme";
 import { useClientOnlyValue } from "@/src/components/useClientOnlyValue";
+import { colors } from "@/src/constants/Colors";
 import styled, { css } from "@emotion/native";
 import { TABLISTS } from "@/src/constants/tab";
 import Header from "@/src/common/Header";

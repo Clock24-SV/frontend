@@ -1,11 +1,11 @@
 import React from "react";
 import CustomText from "@/src/common/CustomText";
+import { colors } from "@/src/constants/Colors";
 import styled, { css } from "@emotion/native";
 import { Image, View } from "react-native";
 import CustomButton from "@/src/common/CustomButton";
-import { colors } from "@/src/constants/Colors";
 
-function _layout() {
+export default function Login() {
   return (
     <Container>
       <View>
@@ -58,5 +58,3 @@ const KakaoLoginButton = css`
   padding: 10px 40px;
   font-size: 20px;
 `;
-
-export default _layout;

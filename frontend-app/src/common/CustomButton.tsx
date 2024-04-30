@@ -1,5 +1,5 @@
-import { View, Text, PressableProps, Pressable } from "react-native";
-import React, { CSSProperties } from "react";
+import React from "react";
+import { PressableProps, Pressable } from "react-native";
 
 interface CustomButtonProps extends PressableProps {
   children?: React.ReactNode;
