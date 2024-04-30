@@ -17,7 +17,7 @@ export default function TodoItem({ item }: TodoItemProps) {
   const { handleDropdownChange } = useTodo();
 
   let stateList = STATES.filter((state) => state !== item.state);
-  const data = stateList.map((state) => ({
+  let data = stateList.map((state) => ({
     value: state,
     label: STATUS_INFO[state].text,
     colors: STATUS_INFO[state].color,
