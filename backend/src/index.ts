@@ -5,7 +5,6 @@ import express from "express";
 import { connectToDB } from "./db/mongoClient";
 import users from "./routes/users";
 import todos from "./routes/todos";
-import login from "./routes/auth";
 import auth from "./routes/auth";
 
 dotenv.config();
