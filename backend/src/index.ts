@@ -5,6 +5,7 @@ import express from "express";
 import { connectToDB } from "./db/mongoClient";
 import users from "./routes/users";
 import todos from "./routes/todos";
+import auth from "./routes/auth";
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+app.use("/api/v1/auth", auth);
 app.use("/api/v1/users", users);
 app.use("/api/v1/todos", todos);
 

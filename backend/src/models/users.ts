@@ -1,5 +1,3 @@
-import mongoose, { Schema, model } from "mongoose";
-
 // const userSchema = new Schema({
 //   /**
 //    * NextAuth.js 에서 제공되는 필드
@@ -14,10 +12,12 @@ import mongoose, { Schema, model } from "mongoose";
 
 // export const User = model("User", userSchema);
 
+import mongoose from "mongoose";
+
 const UserSchema = new mongoose.Schema({
-  name: String,
-  age: Number,
+  nickname: String,
+  profileImage: String,
   email: String,
 });
 
-export const User = mongoose.model("ADMIN2", UserSchema);
+export const UserModel = mongoose.model("User", UserSchema);
