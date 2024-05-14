@@ -2,12 +2,6 @@ import express from "express";
 
 const router = express.Router();
 
-router.get("kakao");
-
-router.get("/login", function (req, res) {
-  res.send("Hello from todos");
-});
-
 // router.post("/user", async (req, res) => {
 //   try {
 //     const newUser = new User(req.body);

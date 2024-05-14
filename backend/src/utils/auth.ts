@@ -28,7 +28,7 @@ export const getUserInfo = async (accessToken: string) => {
 
 export const refreshAccessToken = async (refreshToken: string) => {
   const restApiKey = process.env.REST_API_KEY;
-  const redirectUri = process.env.REDIRECT_URL; // 사용자 앱 설정에 등록된 Redirect URI 입력 필요
+  const redirectUri = process.env.REDIRECT_URL;
 
   try {
     const response = await axios.post(
@@ -41,7 +41,6 @@ export const refreshAccessToken = async (refreshToken: string) => {
       }
     );
 
-    // 새로운 access token과 refresh token 반환
     return {
       newAccessToken: response.data.access_token,
     };
